@@ -1,0 +1,23 @@
+
+<h1 id="tableLabel">La Concession</h1>
+
+<p>Voici nos véhicules disponibles.</p>
+
+<p *ngIf="!concessions"><em>Loading...</em></p>
+
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="concessions">
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Type</th>
+      <th>Quantity</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let concession of concessions">
+      <td>{{ concession.brand }}</td>
+      <td>{{ concession.type }}</td>
+      <td>{{ concession.quantity }}</td>
+    </tr>
+  </tbody>
+</table>
