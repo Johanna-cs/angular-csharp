@@ -10,11 +10,11 @@ namespace angulartest.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    
+
     public class ConcessionController : ControllerBase
     {
         // Data from concession
-        public static string[] Brands = 
+        public static string[] Brands =
         {
             "Audi", "Hyundai", "Toyota", "Volkswagen",
         };
@@ -29,23 +29,23 @@ namespace angulartest.Controllers
             1, 2, 4, 2,
         };
 
-       /* Concession cars = new Concession();
-        //déclaration de tableau d'objet
-        public Concession[] concessions1 =
-        {
-            new Concession()
-            {
-                Brand="marque",
-                Quantity=22,
-                Type="tptp"
-            },
-              new Concession()
-            {
-                Brand="marque",
-                Quantity=22,
-                Type="tptp"
-            }
-        };*/
+        /* Concession cars = new Concession();
+         //déclaration de tableau d'objet
+         public Concession[] concessions1 =
+         {
+             new Concession()
+             {
+                 Brand="marque",
+                 Quantity=22,
+                 Type="tptp"
+             },
+               new Concession()
+             {
+                 Brand="marque",
+                 Quantity=22,
+                 Type="tptp"
+             }
+         };*/
 
         /*List<Concession> concessions = new List<Concession>()
         {
@@ -85,6 +85,12 @@ namespace angulartest.Controllers
 
 
         }
+
+        // GET: api/<ConcessionController>
+        //[HttpPost]
+
+        //public IEnumerable<Concession> Post()
+
     }
 }
 /*for (int i = 0; i < 4; i++)

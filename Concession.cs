@@ -10,5 +10,7 @@ namespace angulartest
 
         public int Quantity { get; set; }
 
+        public string Color { get; set; }
+
     }
 }

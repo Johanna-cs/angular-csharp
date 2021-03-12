@@ -10,15 +10,19 @@ export class LaConcessionComponent  {
 
   public concessions: Concession[];
 
+   
   constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     http.get<Concession[]>(baseUrl + 'Concession').subscribe(result => {
       this.concessions = result;
-      console.log(">>>>", this.concessions),
-        console.log(">>>>", baseUrl)
     },
       error => console.error(error));
 
   }
+
+/*var color: string;
+validateColor(color) {
+  return this.color;
+}*/
 
 }
 
@@ -26,5 +30,6 @@ export class LaConcessionComponent  {
 interface Concession {
   brand: string;
   type: string;
-  quantity: number; 
+  quantity: number;
+  color: string;
 }
