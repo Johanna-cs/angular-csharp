@@ -20,13 +20,18 @@ namespace angulartest.Controllers
         };
 
         public static string[] Types =
-{
+        {
             "A8", "E360", "Hilux", "Polo",
         };
 
         public static int[] Quantities =
-{
+        {       
             1, 2, 4, 2,
+        };
+
+        public static string [] Colors =
+        {
+            "", "", "", "",
         };
 
         /* Concession cars = new Concession();
@@ -76,7 +81,8 @@ namespace angulartest.Controllers
                 {
                     Brand = Brands[i],
                     Quantity = Quantities[i],
-                    Type = Types[i]
+                    Type = Types[i],
+                    Color = Colors[i]
                 };
                 concessions.Add(cars);
                 i++;
@@ -88,7 +94,6 @@ namespace angulartest.Controllers
 
         // GET: api/<ConcessionController>
         //[HttpPost]
-
         //public IEnumerable<Concession> Post()
 
     }

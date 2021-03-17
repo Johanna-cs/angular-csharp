@@ -1,35 +1,42 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, inject, Inject, OnInit } from '@angular/core';
+import { ApiServiceService } from '../api-service.service';
+import { Concession } from '../IConcession';
+
+
 
 @Component({
   selector: 'app-la-concession',
   templateUrl: './la-concession.component.html',
   styleUrls: ['./la-concession.component.css']
 })
-export class LaConcessionComponent  {
+export class LaConcessionComponent implements OnInit {
 
   public concessions: Concession[];
 
-   
-  constructor(http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
-    http.get<Concession[]>(baseUrl + 'Concession').subscribe(result => {
-      this.concessions = result;
-    },
-      error => console.error(error));
 
+  constructor( public restApi: ApiServiceService ) { }
+
+  ngOnInit() {
+    this.getConcessions()
+    console.log(this.concessions)
   }
 
-/*var color: string;
-validateColor(color) {
-  return this.color;
-}*/
+  // Get concessions list
+  getConcessions() {
+    this.restApi.getConcessions()
+      .subscribe(data => {
+          return this.concessions = data;
+      });
+  }
 
-}
+  }
+    // Post concessions list
+ /* saveToApi(concessions) {
+    this.restApi.saveToApi(this.concessions).subscribe((data: Concession[]) => 
+      {
+        this.concessions = data;
+      })
+  }*/
 
 
-interface Concession {
-  brand: string;
-  type: string;
-  quantity: number;
-  color: string;
-}
