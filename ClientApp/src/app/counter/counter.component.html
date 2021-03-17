@@ -3,7 +3,7 @@
 <p>This is a simple example of an Angular component.</p>
 
 <div>
-  <input class="e-input" type="text" placeholder="Enter a Counter Title" />
+  <input class="e-input" [(ngModel)]="counterTitle" type="text" placeholder="Enter a Counter Title" />
 </div>
 
 <p aria-live="polite">Current count: <strong>{{ rangeValue }}</strong></p>

@@ -14,6 +14,7 @@ import { LaConcessionComponent } from './la-concession/la-concession.component';
 import { CircularGaugeModule } from '@syncfusion/ej2-angular-circulargauge';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
