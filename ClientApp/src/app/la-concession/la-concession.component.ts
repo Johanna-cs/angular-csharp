@@ -25,8 +25,8 @@ export class LaConcessionComponent implements OnInit {
   // Get concessions list
   getConcessions() {
     this.restApi.getConcessions()
-      .subscribe(data => {
-          return this.concessions = data;
+      .subscribe(concessions => {
+        this.concessions = concessions;
       });
   }
 

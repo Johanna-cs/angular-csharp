@@ -14,6 +14,11 @@ namespace angulartest.Controllers
     public class ConcessionController : ControllerBase
     {
         // Data from concession
+        public static int[] ids =
+        {
+            1, 2, 3, 4
+        };
+
         public static string[] Brands =
         {
             "Audi", "Hyundai", "Toyota", "Volkswagen",
@@ -79,6 +84,7 @@ namespace angulartest.Controllers
             {
                 var cars = new Concession
                 {
+                    id = ids[i],
                     Brand = Brands[i],
                     Quantity = Quantities[i],
                     Type = Types[i],

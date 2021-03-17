@@ -11,6 +11,8 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { NameComponentComponent } from './name-component/name-component.component';
 import { LaConcessionComponent } from './la-concession/la-concession.component';
+import { CircularGaugeModule } from '@syncfusion/ej2-angular-circulargauge';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { LaConcessionComponent } from './la-concession/la-concession.component';
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
+    CircularGaugeModule,
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
