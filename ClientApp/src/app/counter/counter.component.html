@@ -8,19 +8,17 @@
 
 <p aria-live="polite">Current count: <strong>{{ rangeValue }}</strong></p>
 
-<button class="btn btn-primary" (click)="incrementCounter()">Increment</button>
+<!--<button class="btn btn-primary" (click)="incrementCounter()">Increment</button>-->
 <button class="btn btn-secondary" (click)="setRangeValue()">Set jauge</button>
 
 <div id='container'>
-  <div id='circular-container' style="width:650px; height:350px;">
-    <ejs-circulargauge id="circular-container">
-      <e-pointers>
-        <e-pointer value="{{rangeValue}}"></e-pointer>
-      </e-pointers>
-    </ejs-circulargauge>
-  </div>
+  <ejs-circulargauge id="circular-container">
+    <e-axes>
+      <e-axis>
+        <e-pointers>
+          <e-pointer value={{rangeValue}}></e-pointer>
+        </e-pointers>
+      </e-axis>
+    </e-axes>
+  </ejs-circulargauge>
 </div>
-
-
-
-
